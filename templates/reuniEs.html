@@ -1,0 +1,72 @@
+<ion-view title="Reuniões" id="page2" style="background-color:#f8f8f8;">
+    <ion-content padding="true" class="has-header">
+    <html>
+  <body>    
+    <ion-header-bar class="bar-positive">
+      <div class="buttons">
+        <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="data.showDelete = !data.showDelete; data.showReorder = false">
+        </button>
+      </div>
+      <h1 class="title">                             </h1>
+      <div class="buttons">
+        <button class="button" ng-click="add()">
+            Add
+        </button>
+      </div>
+    </ion-header-bar>
+
+    <ion-content>      
+      <ion-list show-delete="data.showDelete">
+
+        <ion-item ng-repeat="item in reunioes" 
+                  item="item"
+                  ng-click="showReuniao(item)" class="item-remove-animate">
+          <strong>{{ item.mes }}</strong><span style="padding-left:20px"></span>{{ item.date }}
+          <ion-delete-button class="ion-minus-circled" 
+                             ng-click="onItemDeleteR(item)">
+          </ion-delete-button>
+          <d ion-show>
+        </ion-item>
+
+      </ion-list>
+
+    </ion-content>
+      
+  </body>
+</html>
+    <!--
+    <html>
+  <body>    
+    <ion-header-bar class="bar-positive">
+     <div class="buttons">
+        <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="data.showDelete = !data.showDelete; data.showReorder = false">
+        </button>
+      </div>
+      <h1 class="title">                             </h1>
+      <div class="buttons">
+        <button class="button"  ng-click="add()">
+            Add
+        </button>
+      </div>
+    </ion-header-bar>
+
+    <ion-content>
+    <d>{{tamanho}}</d>
+    <ion-list show-delete="data.showDelete">
+        <ion-item ng-repeat="reuniao in reunioes" ng-click="showReuniao(reuniao)" class="item-remove-animate">
+          <strong>{{ reuniao.mes }}</strong><span style="padding-left:20px"></span>{{ reuniao.date }} 
+          <ion-delete-button class="ion-minus-circled" 
+                             ng-click="onItemDelete(reuniao)">
+          </ion-delete-button>
+          <d ion-show>
+        </ion-item>
+    </ion-list>    
+    </ion-content>
+      
+  </body>
+</html>-->
+
+    </ion-content>    
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view title="Aniversariantes" id="page6" style="background-color:#f8f8f8;">
+    <ion-content padding="true" class="has-header">
+    	<html>
+  <body>    
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">  {{mes}}  </h1>
+    </ion-header-bar>
+    <ion-content>     
+      <ion-list ng-init= "items = atualiza()">
+        <ion-item ng-repeat="item in items">
+         <span style="padding-left:8px"></span><strong>{{ item.name|limitTo: 31}}{{item.name.length > 29 ? '' : ''}}:</strong><span style="padding-left:8px"></span>{{ item.date }}
+          <d ion-show>
+        </ion-item>
+      </ion-list>
+    </ion-content>      
+  </body>
+</html>
+    </ion-content>
+</ion-view>
